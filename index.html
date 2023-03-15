@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <title>Kantor</title>
+</head>
+
+<body class="body">
+    <form class="form js-form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Kantor</legend>
+            <label class="form__label" for="amount">Podaj kwotę</label><br>
+            <input class="form__input js-amount" type="number" id="amount" min="0.01" step="0.01" name="zloty" required>zł
+            PLN<br>
+            <label class="form__label" for="currency">Wybierz walutę</label><br>
+            <select class="form__input js-currency" name="currency" id="currency">
+                <option value="GBP">GBP</option>
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="RMB">RMB</option>
+            </select><br>
+            <input class="form__submit" type="submit" value="Przelicz">
+            <p class="form__paragraph">
+                <strong class="js-exchange">N/A</strong>
+            </p>
+        </fieldset>
+    </form>
+    <form class="js-bmiForm">
+        <fieldset>
+            <legend>kalkulator BMI</legend>
+            <label for="height">podaj wzrost w cm</label><br>
+            <input class="js-height" type="number" id="height" step="any" min="1" value="189" name="height"><br>
+            <label for="wieght">podaj wagę w kg</label><br>
+            <input class="js-weight" type="number" id="weight" step="any" min="1" value="129" name="weight"><br>
+            <input type="submit" value="oblicz"><br>
+            wynik: <strong class="js-result">N/A</strong>
+        </fieldset>
+    </form>
+</body>
+
+</html>

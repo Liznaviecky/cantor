@@ -1,0 +1,15 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.body {
+    margin-top: 13px;
+    background: linear-gradient(270deg, hsl(180, 100%, 97%), hsl(120, 25%, 65%) 100%);
+}
