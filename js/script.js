@@ -51,7 +51,7 @@ form.addEventListener("submit", (event) => {
      exchangeOutput.innerText = `${zloty} PLN = ${result.toFixed(2)}${currency}`*/
 });
 
-/*let bmiForm = document.querySelector(".js-bmiForm");
+let bmiForm = document.querySelector(".js-bmiForm");
 let heightImput = document.querySelector(".js-height");
 let weightImput = document.querySelector(".js-weight");
 let converterResult = document.querySelector(".js-result");
@@ -65,4 +65,4 @@ bmiForm.addEventListener("submit", (event) => {
     let result = weight / (height / 100) ** 2;
 
     converterResult.innerText = result.toFixed(2);
-});*/
+});
