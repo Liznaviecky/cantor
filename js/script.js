@@ -64,5 +64,5 @@ bmiForm.addEventListener("submit", (event) => {
 
     let result = weight / (height / 100) ** 2;
 
-    converterResult.innerText = result.toFixed(2);
+    converterResult.innerText = `${result.toFixed(2)} - ponadprzeciętna masa mięśniowa podnosi wskaźnik BMI, co nie jest nadwagą`;
 });

@@ -39,8 +39,8 @@
             </p>
         </fieldset>
     </form>
-    <form class="js-bmiForm">
-        <fieldset>
+    <form class="bmiForm js-bmiForm">
+        <fieldset class="bmiForm">
             <legend>kalkulator BMI</legend>
             <label for="height">podaj wzrost w cm</label><br>
             <input class="js-height" type="number" id="height" step="any" min="1" value="188" name="height"><br>
@@ -49,7 +49,18 @@
             <input type="submit" value="oblicz"><br>
             wynik: <strong class="js-result">N/A</strong>
         </fieldset>
+        <ul class="bmiForm">
+            <li>poniżej 16 - wygłodzenie</li>
+            <li>16 - 16.99 - wychudzenie</li>
+            <li>17 - 18.49 - niedowaga</li>
+            <li>18.5 - 24.99 - waga prawidłowa</li>
+            <li>25.0 - 29.99 - nadwaga</li>
+            <li>30.0 - 34.99 - I stopień otyłości</li>
+            <li>35.0 - 39.99 - II stopień otyłości</li>
+            <li>powyżej 40.0 - III stopień otyłości zwany otyłością skrajną</li>
+        </ul>
     </form>
+    
 </body>
 
 </html>

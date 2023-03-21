@@ -56,3 +56,15 @@
 .form__paragraph {
     text-align: center;
 }
+
+.bmiForm {
+    margin: auto;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding: 6px;
+    max-width: 300px;
+    border: solid 1px;
+    border-radius: 13px;
+    list-style: inside;
+    line-height: initial;
+}
