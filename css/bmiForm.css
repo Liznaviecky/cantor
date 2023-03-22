@@ -1,0 +1,35 @@
+.bmiForm {
+    margin: auto;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding: 6px;
+    max-width: 300px;
+    border: solid 1px hsl(0deg 0% 100%);;
+    border-radius: 13px;
+    background: linear-gradient(90deg, #7f5a4dcf 0%, #ffeb3bd9 100%);
+}
+
+.bmiForm__fieldset {
+    border: solid 1px hsl(0deg 0% 100%);
+    border-radius: 13px;
+}
+
+.bmiForm__legend {
+    background: linear-gradient(272deg, #7f5a4d 0%, #FFEB3B 100%);
+    border-radius: 13px;
+    padding: 4px;
+}
+
+.bmiForm__list {
+    border: solid 1px hsl(0deg 0% 100%);;
+    border-radius: 13px;
+    list-style: inside;
+    line-height: initial;
+    padding: 6px;
+}
+
+.bmiFrom__input {
+    background: linear-gradient(272deg, #7f5a4d 0%, #FFEB3B 100%);
+    border-radius: 13px;
+    padding: 4px;
+}
