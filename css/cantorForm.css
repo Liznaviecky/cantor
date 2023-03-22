@@ -5,6 +5,7 @@
 }
 
 .form__fieldset {
+    margin: 13px;
     border: 1px solid hsl(0deg 0% 100%);
     border-radius: 13px;
     background: linear-gradient(90deg, #7f5a4dcf 0%, #ffeb3bd9 100%);
