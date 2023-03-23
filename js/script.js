@@ -1,4 +1,4 @@
-console.log("hejka");
+console.log("hejka. Ten kod jest już w repozytorium Git.");
 
 let form = document.querySelector(".js-form");
 let amountImput = document.querySelector(".js-amount");
