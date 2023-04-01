@@ -1,15 +1,15 @@
-console.log("hejka. Ten kod jest już w repozytorium Git.");
+{
+    const welcome = () => {
+        console.log("hejka. Ten kod jest już w repozytorium Git.");
+    };
 
-let form = document.querySelector(".js-form");
-let amountImput = document.querySelector(".js-amount");
-let currencySelect = document.querySelector(".js-currency");
-let exchangeOutput = document.querySelector(".js-exchange");
-
-form.addEventListener("submit", (event) => {
+const onExchangeOutput = (event) => {
     event.preventDefault();
-
-    let zloty = amountImput.value;
-    let currency = currencySelect.value;
+    const amountImput = document.querySelector(".js-amount");
+    const currencySelect = document.querySelector(".js-currency");
+    const exchangeOutput = document.querySelector(".js-exchange");
+    const zloty = amountImput.value;
+    const currency = currencySelect.value;
     let rate;
 
     switch (currency) {
@@ -25,13 +25,14 @@ form.addEventListener("submit", (event) => {
         case "RMB":
             rate = 0.65;
             break;
+            
     }
 
     result = zloty / rate
 
     exchangeOutput.innerHTML = `${zloty} PLN = ${result.toFixed(2)}${currency}`
-
-    /* let result;
+     
+    /* const result;
  
      switch (currency) {
          case "GBP":
@@ -49,20 +50,29 @@ form.addEventListener("submit", (event) => {
      };
  
      exchangeOutput.innerText = `${zloty} PLN = ${result.toFixed(2)}${currency}`*/
-});
+};
 
-let bmiForm = document.querySelector(".js-bmiForm");
-let heightImput = document.querySelector(".js-height");
-let weightImput = document.querySelector(".js-weight");
-let converterResult = document.querySelector(".js-result");
-
-bmiForm.addEventListener("submit", (event) => {
+const bmiOutput = (event) => {
     event.preventDefault();
-
-    let height = heightImput.value;
-    let weight = weightImput.value;
-
-    let result = weight / (height / 100) ** 2;
+    const heightImput = document.querySelector(".js-height");
+    const weightImput = document.querySelector(".js-weight");
+    const converterResult = document.querySelector(".js-result");
+    const height = heightImput.value;
+    const weight = weightImput.value;
+    const result = weight / (height / 100) ** 2;
 
     converterResult.innerText = `${result.toFixed(2)} - ponadprzeciętna masa mięśniowa podnosi wskaźnik BMI, co nie jest nadwagą`;
-});
+};
+
+const init = () => {
+    const form = document.querySelector(".js-form");
+    const bmiForm = document.querySelector(".js-bmiForm");
+
+    form.addEventListener("submit", onExchangeOutput);
+    bmiForm.addEventListener("submit", bmiOutput);
+
+welcome();
+};
+
+init ();
+};
