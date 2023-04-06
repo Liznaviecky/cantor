@@ -3,16 +3,34 @@
         console.log("hejka. Ten kod jest już w repozytorium Git.");
     };
 
+    const calculateResult = (currency, zloty) => {
+        switch (currency) {
+            case "GBP":
+                return zloty / 5.30;    
+            case "EUR":
+                return zloty / 4.70;
+            case "USD":
+                return zloty / 4.33;
+            case "RMB":
+                return zloty / 0.65;
+        };
+    };
+
+    const updateResultText = (zloty, result, currency) => {
+        const exchangeOutput = document.querySelector(".js-exchange");
+
+        exchangeOutput.innerText = `${zloty} PLN = ${result.toFixed(2)}${currency}`
+    };
+
     const onExchangeOutput = (event) => {
         event.preventDefault();
         const amountImput = document.querySelector(".js-amount");
         const currencySelect = document.querySelector(".js-currency");
-        const exchangeOutput = document.querySelector(".js-exchange");
         const zloty = amountImput.value;
         const currency = currencySelect.value;
-        let rate;
+        /*let rate;
 
-        switch (currency) {
+       switch (currency) {
             case "GBP":
                 rate = 5.30;
                 break;
@@ -30,26 +48,13 @@
 
         result = zloty / rate
 
-        exchangeOutput.innerHTML = `${zloty} PLN = ${result.toFixed(2)}${currency}`
+        exchangeOutput.innerHTML = `${zloty} PLN = ${result.toFixed(2)}${currency}`*/
 
-        /* const result;
-     
-         switch (currency) {
-             case "GBP":
-                 result = zloty / 5.30;
-                 break;
-             case "EUR":
-                 result = zloty / 4.70;
-                 break;
-             case "USD":
-                 result = zloty / 4.33;
-                 break;
-             case "RMB":
-                 result = zloty / 0.65;
-                 break;
-         };
-     
-         exchangeOutput.innerText = `${zloty} PLN = ${result.toFixed(2)}${currency}`*/
+        const result = calculateResult(currency, zloty);
+
+       
+        updateResultText(zloty, result, currency);
+        
     };
 
     const bmiOutput = (event) => {
