@@ -45,7 +45,6 @@
         event.preventDefault();
         const heightImput = document.querySelector(".js-height");
         const weightImput = document.querySelector(".js-weight");
-       
         const height = heightImput.value;
         const weight = weightImput.value;
         const result = calculateBmiResult(weight, height);
