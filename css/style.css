@@ -10,6 +10,8 @@ html {
 }
 
 .body {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 13px;
     /*background: linear-gradient(270deg, hsl(180, 100%, 97%), hsl(120, 25%, 65%) 100%);*/
     background-image: url("../images/background.png");
